@@ -1,7 +1,6 @@
-const simpsonsName=document.getElementById('simpson-nombre');
-const simpsonsLast=document.getElementById('simpson-apellido');
-const simpsonsSname=document.getElementById('simpson-snombre');
-const simpsonsAge=document.getElementById('simpson-edad');
+
+
+const container = document.getElementById('container');
 
 const apiUrl ="https://localhost:5001/simpsons/Character";
 const apiRespons = async url =>{
@@ -13,16 +12,27 @@ const apiRespons = async url =>{
 
 const getSimpsonsDatal = async ()=> {
     const response =await fetch(`${apiUrl}`);
-    console.log(response);
+    //console.log(response);
     const simpson = await response.json();
     console.log(simpson);
-    const{firstName, age, lastName, secondName} = simpson;
-    simpsonsName.innerText = firstName;
-    simpsonsAge.innerText = age;
-    simpsonsLast.innerText = lastName;
-    simpsonsSname.innerText = secondName;
 
-    console.log(firstName);
+    simpson.forEach(element => {
+        const{firstName, age, lastName, secondName} = element;
+
+        container.innerHTML += `
+            <div>${firstName}</div>
+            <div>${secondName}</div>
+            <div>${lastName}</div>
+            <div>${age}</div>
+            </br>
+        `;
+
+        console.log(firstName);
+
+    });
+
+    
+
 
 }
 //apiRespons(apiUrl);

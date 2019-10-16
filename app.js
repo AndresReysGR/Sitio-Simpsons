@@ -23,6 +23,8 @@ const getSimpsonsDatal = async ()=> {
             <div>${firstName}</div>
             <div>${secondName}</div>
             <div>${lastName}</div>
+            <div>${age}</div>
+            
             
             </br>
         `;

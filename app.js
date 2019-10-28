@@ -2,6 +2,11 @@
 
 const container = document.getElementById('container');
 
+const getWidth = () =>{
+    let width = document.documentElement.clientWidth;
+    pixels.innerText = `${width}px`
+}
+
 const apiUrl ="https://localhost:5001/simpsons/Character";
 const apiRespons = async url =>{
     const response = await fetch(url);
@@ -33,10 +38,10 @@ const getSimpsonsDatal = async ()=> {
         
 
     });
-
-    
-
-
 }
+
+
+getWidth();
+Window.addEventListener(`resize`, getWidth);
 //apiRespons(apiUrl);
 getSimpsonsDatal();

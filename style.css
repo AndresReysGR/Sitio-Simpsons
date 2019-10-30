@@ -2,7 +2,7 @@ body{
     background-color: tomato;
     margin: 0;
 }
-.pixels-text{
+.container{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 100px;
     color: white;
@@ -11,4 +11,32 @@ body{
     top: 50%;
     left: 0;
     right: 0; 
+}
+.simpson-nombre{
+    width: 90%;
+    min-height: 100px;
+    overflow: hidden;
+    background-color: thistle;
+    margin: 0 auto;
+}
+.simpson-apellido{
+    width: 90%;
+    min-height: 100px;
+    overflow: hidden;
+    background-color: thistle;
+    margin: 0 auto;
+}
+.simpson-snombre{
+    width: 90%;
+    min-height: 100px;
+    overflow: hidden;
+    background-color: thistle;
+    margin: 0 auto;
+}
+.simpson-edad{
+    width: 90%;
+    min-height: 100px;
+    overflow: hidden;
+    background-color: thistle;
+    margin: 0 auto;
 }
